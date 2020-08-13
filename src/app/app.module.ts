@@ -8,9 +8,8 @@ import { CounterModule } from './counter/counter.module';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
-    CounterModule
+    BrowserModule
   ],
-  providers: [CounterService]
+  providers: []
 })
 export class AppModule { }
