@@ -13,6 +13,7 @@ import { CounterService } from './counter.service';
     BrowserModule,
     StoreModule.forRoot({ count: CounterReducer })
   ],
-  providers: [CounterService]
+  providers: [CounterService],
+  exports: [CounterService]
 })
 export class CounterModule { }
