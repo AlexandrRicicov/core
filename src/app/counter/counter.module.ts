@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 
 import { CounterReducer } from './counter.reducer';
-import { CounterService } from './counter.service';
 
 
 @NgModule({
@@ -13,7 +12,6 @@ import { CounterService } from './counter.service';
     BrowserModule,
     StoreModule.forRoot({ count: CounterReducer })
   ],
-  providers: [CounterService],
-  exports: [CounterService]
+  providers: []
 })
 export class CounterModule { }
