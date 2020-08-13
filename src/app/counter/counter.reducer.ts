@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from './app.actions.';
+import { increment, decrement, reset } from './counter.actions.';
 
 export const initialState = 0;
 
@@ -11,6 +11,6 @@ const _counterReducer = createReducer(initialState,
 );
 
 // tslint:disable-next-line: typedef
-export function appReducer(state, action) {
+export function CounterReducer(state, action) {
   return _counterReducer(state, action);
 }
