@@ -1,10 +1,13 @@
+import { Store, select } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Store, select } from '@ngrx/store';
-import { increment, decrement, reset } from './counter.actions.';
+import { increment, decrement, reset } from './core.actions';
 
-@Injectable()
-export class CounterService {
+@Injectable({
+  providedIn: 'root'
+})
+export class CoreService {
+
   count$: Observable<number>;
 
   constructor(private store: Store<{ count: number }>) {
